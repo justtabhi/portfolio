@@ -35,13 +35,15 @@
 
         
         
-        const DATE=function (){
+        const DATE=function (props){
+
+            console.log(props);
 
             const date = new Date();
 
             const thisYear=date.getFullYear();
 
-            return <h1>THIS YEAR IS: {thisYear}</h1>
+            return <h1 style={{color: props.color}}>THIS YEAR IS: {thisYear}</h1>
         }
         
 
@@ -49,7 +51,7 @@
 
         ReactDOM.render(<Clock />,document.getElementById('app1'));
 
-        ReactDOM.render(<DATE />,document.getElementById('app2'));
+        ReactDOM.render(<DATE color="#00ff00"/>,document.getElementById('app2'));
 
     </script>
 </body>
